@@ -4,7 +4,7 @@ var router = express.Router();
 router.post('/add_user', function(req, res) {
    console.log("Test");
    var data=req.body;
-   res.send('data')
+   res.send('test data')
   });
   
   module.exports = router;
