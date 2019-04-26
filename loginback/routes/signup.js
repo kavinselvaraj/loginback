@@ -7,7 +7,8 @@ router.post('/add_user', function(req, res) {
    lastname=data.lastname
    username=data.username
    password=data.password
-   var sqlquery="INSERT INTO user_register (firstName,lastName,userName,password) values('"+firstname+"','"+lastname+"','"+username+"','"+password+"')";
+   role=data.role
+   var sqlquery="INSERT INTO user_register (firstName,lastName,userName,password,role) values('"+firstname+"','"+lastname+"','"+username+"','"+password+"','"+role+"')";
    req.app.locals.connection.query(sqlquery,function(error,results,fields){
       if(error) throw error;
       console.log(results)
